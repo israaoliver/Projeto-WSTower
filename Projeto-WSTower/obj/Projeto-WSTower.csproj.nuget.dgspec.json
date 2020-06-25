@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joao_\\OneDrive\\Área de Trabalho\\Matheus\\Senai\\ProjetoCampeonato\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj": {}
+    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao_\\OneDrive\\Área de Trabalho\\Matheus\\Senai\\ProjetoCampeonato\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj": {
+    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao_\\OneDrive\\Área de Trabalho\\Matheus\\Senai\\ProjetoCampeonato\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj",
+        "projectUniqueName": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj",
         "projectName": "Projeto-WSTower",
-        "projectPath": "C:\\Users\\joao_\\OneDrive\\Área de Trabalho\\Matheus\\Senai\\ProjetoCampeonato\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj",
-        "packagesPath": "C:\\Users\\joao_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao_\\OneDrive\\Área de Trabalho\\Matheus\\Senai\\ProjetoCampeonato\\Projeto-WSTower\\Projeto-WSTower\\obj\\",
+        "projectPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj",
+        "packagesPath": "C:\\Users\\Israel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\joao_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Israel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -56,6 +56,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [
@@ -68,12 +72,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
