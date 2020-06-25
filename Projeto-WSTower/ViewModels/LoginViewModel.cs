@@ -9,7 +9,7 @@ namespace Projeto_WSTower.ViewModels
     public class LoginViewModel
     {
 
-        [Required(ErrorMessage = "O e-mail do usuário é obrigatório!")]
+        [Required(ErrorMessage = "O usuário é obrigatório!")]
         [DataType(DataType.EmailAddress)]
         public string Usuario { get; set; }
 
