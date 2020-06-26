@@ -19,6 +19,11 @@ namespace Projeto_WSTower.Controllers
 
         UsuarioRepository _usuarioRepository = new UsuarioRepository();
 
+        /// <summary>
+        /// Busca o usuario pelo id informado
+        /// </summary>
+        /// <param name="id">Id do usuario que sera buscado</param>
+        /// <returns>Retorna o objeto Usuario em formato JSON</returns>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize]
@@ -33,25 +38,67 @@ namespace Projeto_WSTower.Controllers
             return Ok(usuario);
         }
 
+        /// <summary>
+        /// Cadastra um novo Usuario
+        /// </summary>
+        /// <remarks>
+        /// Sample response:
+        /// 
+        ///      {
+        ///        "Nome": "Name",
+        ///        "Email" : "string",
+        ///        "Apelido" : "string",
+        ///        "Foto": "IMAGE",
+        ///        "Senha" : "string"
+        ///        }
+        ///     
+        ///</remarks>
+        /// <param name="user">Objeto que será cadastrado</param>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status303SeeOther)]
         [HttpPost]
         public ActionResult Cadastrar(Usuario user)
         {
-            if ((_usuarioRepository.BuscarPorEmail(user.Email) != null))
-                return StatusCode(303, "Email existente ");
-            if (_usuarioRepository.BuscarPorApelido(user.Apelido) != null)
-                return StatusCode(303, "Apelido existente ");
+            try
+            {
+                if ((_usuarioRepository.BuscarPorEmail(user.Email) != null))
+                    return StatusCode(303, "Email existente ");
+                if (_usuarioRepository.BuscarPorApelido(user.Apelido) != null)
+                    return StatusCode(303, "Apelido existente ");
 
-            _usuarioRepository.Cadastrar(user);
-            return StatusCode(201, "Usuario criado");
+                _usuarioRepository.Cadastrar(user);
+                return StatusCode(201, "Usuario criado");
+
+            }
+            catch(Exception erro)
+            {
+                return BadRequest(erro);
+            }
+
+            
         }
 
+        /// <summary>
+        /// Atualiza o usuario pode ser atualizado apenas uma das informaçoes não contem senha
+        /// </summary>
+        /// <remarks>
+        /// Sample response:
+        /// 
+        ///      {
+        ///        "Nome": "Name",
+        ///        "Email" : "string",
+        ///        "Apelido" : "string",
+        ///        "Foto": "IMAGE",
+        ///        }
+        ///     
+        ///</remarks>
+        /// <param name="userAtualizado">Objeto que contem as informaçoes que serão alteradas</param>
+        /// <param name="id">Id do Usuario que sera atualizado</param>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize]
         [HttpPut("{id}")]
-        public ActionResult Atualizar(int id,Usuario userAtualizado)
+        public ActionResult Atualizar(int id, AtlzUserViewModel userAtualizado )
         {
             var usuario = _usuarioRepository.BuscarPorId(id);
 
@@ -70,6 +117,19 @@ namespace Projeto_WSTower.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Atualiza apenas a senha utilizando o id para encontrar o usuario
+        /// </summary>
+        /// <remarks>
+        /// Sample response:
+        /// 
+        ///      {
+        ///        "Id" : 0,
+        ///        "Senha" : "string"
+        ///        }
+        ///     
+        ///</remarks>
+        /// <param name="AtlzSenha">Objeto que contem a senha alterada</param>
         [HttpPut("Senha")]
         [ProducesResponseType(StatusCodes.Status304NotModified)]
         [ProducesResponseType(StatusCodes.Status202Accepted)]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_WSTower.Repositories;
@@ -15,6 +16,13 @@ namespace Projeto_WSTower.Controllers
     {
         ConfrontoRepository repository = new ConfrontoRepository();
 
+        /// <summary>
+        /// GET para buscar por id o confronto
+        /// </summary>
+        /// <param name="id">Id do confronto que será buscado</param>
+        /// <returns>Retorna o confronto</returns>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize]
         [HttpGet("{id}")]
         public ActionResult Confronto(int id)
         {

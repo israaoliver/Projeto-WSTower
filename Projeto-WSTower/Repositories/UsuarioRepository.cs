@@ -12,7 +12,7 @@ namespace Projeto_WSTower.Repositories
     {
         CampeonatoContext ctx = new CampeonatoContext();
 
-        public void Atualizar(int id,Usuario userAtlz)
+        public void Atualizar(int id,AtlzUserViewModel userAtlz)
         {
             var userDB = ctx.Usuario.Find(id);
 
