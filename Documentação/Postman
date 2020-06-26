@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "ea0ce53f-f598-46d6-9819-d31b1894f2a1",
+		"name": "WSTower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Usuario\" : \"Israel@bool.com\",\r\n    \"Senha\" : \"asdfgh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Selecao",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecao",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMxOTM1NzAsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.07xi8LeBtaO__ju2VrsnGpUF4RtjUA0GoNakjAE9ie8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecao/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\": \"China\",\r\n    \"Bandeira\" : \"\",\r\n    \"Uniforme\" : \"\",\r\n    \"Escalacao\": \"1-5-4-1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Selecao",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Selecao/9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecao",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 10,\r\n    \"Nome\": \"Bolivia\",\r\n    \"Bandeira\" : \"\",\r\n    \"Uniforme\" : \"\",\r\n    \"Escalacao\": \"4-4-2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Selecao",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Selecao"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Atualizar Senha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 1,\r\n    \"Senha\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuario/Senha",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuario",
+								"Senha"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Usuario/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"israel\",\r\n    \"Email\" : \"Israel@bool.com\",\r\n    \"Apelido\" : \"peichim\",\r\n    \"Foto\" : \"\",\r\n    \"Senha\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza o Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"Matheus\",\r\n    \"Email\" : \"mar@bool.com\",\r\n    \"Apelido\" : \"mat\",\r\n    \"Foto\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Usuario/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Confronto",
+			"item": [
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Confronto/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Confronto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogador",
+			"item": [
+				{
+					"name": "ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogador",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Jogador/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Jogador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Principal",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Principal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorNomeDeSelecao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IklzcmFlbEBib29sLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1OTMyMDc5NzUsImlzcyI6IldTVG93ZXIuV2ViQXBpIiwiYXVkIjoiV1NUb3dlci5XZWJBcGkifQ.rHB0iE0O9qJKVAqcfB9wUSJXesVEbq8NiXk0ecRPrzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Principal/Brasil",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Principal",
+								"Brasil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Principal/Data/20-06-2020",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Principal",
+								"Data",
+								"20-06-2020"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
