@@ -1,12 +1,15 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Projeto_WSTower
 {
@@ -17,8 +20,44 @@ namespace Projeto_WSTower
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
+            
             services.AddControllers();
+
+            services
+                // Define a forma de autenticação
+                .AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                })
+
+                // Define os parâmetros de validação do token
+                .AddJwtBearer("JwtBearer", options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        // Quem está solicitando
+                        ValidateIssuer = true,
+
+                        // Quem está validando
+                        ValidateAudience = true,
+
+                        // Definindo o tempo de expiração
+                        ValidateLifetime = true,
+
+                        // Forma de criptografia
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("Wstower-key-autenticacao")),
+
+                        // Tempo de expiração do token
+                        ClockSkew = TimeSpan.FromMinutes(30),
+
+                        // Nome da issuer, de onde está vindo
+                        ValidIssuer = "WSTower.WebApi",
+
+                        // Nome da audience, de onde está vindo
+                        ValidAudience = "WSTower.WebApi"
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,6 +69,11 @@ namespace Projeto_WSTower
             }
 
             app.UseRouting();
+            // app.UseRequestLocalization();
+            // app.UseCors();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

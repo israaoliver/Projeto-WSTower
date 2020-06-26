@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj": {}
+    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj": {
+    "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj",
+        "projectUniqueName": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj",
         "projectName": "Projeto-WSTower",
-        "projectPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\Projeto-WSTower.csproj",
+        "projectPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower\\Projeto-WSTower\\Projeto-WSTower.csproj",
         "packagesPath": "C:\\Users\\Israel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower-\\Projeto-WSTower\\obj\\",
+        "outputPath": "C:\\Users\\Israel\\Documents\\Docs\\SENAI\\WsTower\\Projeto-WSTower\\Projeto-WSTower\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,6 +43,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -56,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             },
             "xunit.extensibility.core": {
               "target": "Package",

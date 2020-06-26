@@ -12,6 +12,36 @@ namespace Projeto_WSTower.Repositories
     {
         CampeonatoContext ctx = new CampeonatoContext();
 
+        public void Atualizar(int id,Usuario userAtlz)
+        {
+            var userDB = ctx.Usuario.Find(id);
+
+            if ((userAtlz.Nome != null) || (userDB.Nome != userAtlz.Nome))
+                userDB.Nome = userAtlz.Nome;
+            if ((userAtlz.Email != null) || (userDB.Apelido != userAtlz.Apelido))
+                userDB.Email = userAtlz.Email;
+            if (userAtlz.Apelido != null)
+                userDB.Apelido = userAtlz.Apelido;
+            if (userAtlz.Foto != null)
+                userDB.Foto = userAtlz.Foto;
+
+            ctx.Usuario.Update(userDB);
+            ctx.SaveChanges();
+        }
+
+        public void AtulizarSenha(SenhaViewModel Atlzsenha)
+        {
+            var userDB = ctx.Usuario.Find(Atlzsenha.Id);
+                
+            userDB.Senha = Atlzsenha.Senha;
+
+            ctx.Usuario.Update(userDB);
+            ctx.SaveChanges();
+        }
+        public Usuario BuscarPorId(int id)
+        {
+            return ctx.Usuario.Find(id);
+        }
         public Usuario BuscarPorEmail(string email)
         {
             return ctx.Usuario.FirstOrDefault(e => e.Email == email);
